@@ -1,0 +1,70 @@
+*{
+    border: solid red 4px;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #072c45;
+}
+.logoHead{
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    height: 8rem;
+}
+.logoHead a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}
+.logoHead h1{
+    padding: 0.3rem;
+    border: solid white 4px;
+
+}
+.logoHead span{
+    color: indianred;
+
+}
+.glass{
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    -webkit-backdrop-filter: blur(4.4px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    height: 50em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bigcontainer{
+    height: 40em;
+    width: 100em;
+    border: #072c45 8px solid;
+    border-radius: 1em;
+}
+.textenter{
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.textenter #mainentry {
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.4px);
+    -webkit-backdrop-filter: blur(4.4px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    width: 80%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 1.5rem;
+}

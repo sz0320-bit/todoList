@@ -155,6 +155,7 @@ body{
     justify-content: center;
     background-color: #072c45;
     border-radius: 16px;
+    border: 4px solid white;
 }
 #entrypoint{
     display: flex;

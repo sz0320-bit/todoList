@@ -30,8 +30,8 @@ let linebox = document.querySelector("#entrypoint");
                 '<input type="text" readonly value="' + items[arraysize-1] + '" onfocusout="setsData(this);">' +
             '</div>' +
             '<div class="buttonholder" id="holder' + arraysize + '">' +
-                ' <input type="button" value="edit" class="editbutton" id="edit' + arraysize + '" onclick="edits(this);">' +
-                '<input type="button" value="delete" class="deletebutton" id="delete' + arraysize + '" onclick="deletes(this);">' +
+                ' <input type="button" value="edit" class="editbutton" id="edit' + (arraysize) + '" onclick="edits(this);">' +
+                '<input type="button" value="delete" class="deletebutton" id="delete' + (arraysize-1) + '" onclick="deletes(this);">' +
             '</div>' +
         '</div>'
     console.log()
@@ -39,7 +39,11 @@ let linebox = document.querySelector("#entrypoint");
 }
 
 function deletes(x){
+    const buttonID = x.id.replace("delete","");
     x.parentNode.parentNode.remove();
+    console.log(buttonID);
+    items.splice(buttonID,1);
+    console.log(items.toString());
 }
 
 function edits(x){

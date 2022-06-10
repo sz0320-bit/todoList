@@ -27,7 +27,7 @@ let linebox = document.querySelector("#entrypoint");
     linebox.innerHTML +=
         '<div class="textholder">' +
             '<div class="unline" id="line' + (arraysize-1) + '" >' +
-                '<input type="text" readonly value="' + items[arraysize-1] + '" onfocusout="setsData(this);">' +
+                '<input type="text" class="textbox" readonly value="' + items[arraysize-1] + '" onfocusout="setsData(this);">' +
             '</div>' +
             '<div class="buttonholder" id="holder' + arraysize + '">' +
                 ' <input type="button" value="edit" class="editbutton" id="edit' + (arraysize) + '" onclick="edits(this);">' +
@@ -39,10 +39,11 @@ let linebox = document.querySelector("#entrypoint");
 }
 
 function deletes(x){
-    const buttonID = x.id.replace("delete","");
     x.parentNode.parentNode.remove();
-    console.log(buttonID);
-    items.splice(buttonID,1);
+    const textval = x.parentNode.parentNode.firstChild.firstChild.value;
+    console.log(textval);
+    const textindex = items.indexOf(textval);
+    items.splice(textindex,1);
     console.log(items.toString());
 }
 

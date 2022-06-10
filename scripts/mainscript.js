@@ -24,9 +24,8 @@ textbox.addEventListener('keydown', (event) => {
 function displayList(x){
     let arraysize = items.length;
 let linebox = document.querySelector("#entrypoint");
-linebox.innerHTML += '<div class="textholder"><div class="unline" id="line'+arraysize+'">'+x+'</div><div class="buttonholder" id="holder'+arraysize+'"> <input type="button" value="delete" class="deletebutton" id="delete'+arraysize+'" onclick="this.parentNode.parentNode.remove();"></div></div>'
+linebox.innerHTML += '<div class="textholder"><div class="unline" id="line'+arraysize+'"><p>'+x+'</p></div><div class="buttonholder" id="holder'+arraysize+'"> <input type="button" value="edit" class="editbutton" id="edit'+arraysize+'" onclick="this.parentNode.parentNode.firstChild.firstChild.textContent.replace("bruh");"><input type="button" value="delete" class="deletebutton" id="delete'+arraysize+'" onclick="this.parentNode.parentNode.remove();"></div></div>'
     console.log()
 }
 
-let deleted = document.querySelector(".deletebutton");
-console.log(deleted)
+

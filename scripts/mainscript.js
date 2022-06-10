@@ -53,7 +53,8 @@ function edits(x){
 
 function setsData(x){
     const lineId = x.parentNode.id.replace("line","");
-    items[lineId] = x.value;
+    items[lineId] = "";
+    items[lineId] += x.value;
     console.log(items)
     x.setAttribute("readonly",true);
 }

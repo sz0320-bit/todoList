@@ -6,7 +6,7 @@ button.addEventListener('click',() => {
     let itemvalue = textbox.value;
     items.push(itemvalue);
     textbox.value = "";
-    displayList(itemvalue);
+    displayList();
     console.log(itemvalue);
     console.log(JSON.stringify(items));
 });
@@ -21,11 +21,27 @@ textbox.addEventListener('keydown', (event) => {
    }
 });
 
-function displayList(x){
+function displayList(){
     let arraysize = items.length;
 let linebox = document.querySelector("#entrypoint");
-linebox.innerHTML += '<div class="textholder"><div class="unline" id="line'+arraysize+'"><p>'+x+'</p></div><div class="buttonholder" id="holder'+arraysize+'"> <input type="button" value="edit" class="editbutton" id="edit'+arraysize+'" onclick="this.parentNode.parentNode.firstChild.firstChild.textContent.replace("bruh");"><input type="button" value="delete" class="deletebutton" id="delete'+arraysize+'" onclick="this.parentNode.parentNode.remove();"></div></div>'
+
+    linebox.innerHTML += '<div class="textholder">' +
+        '<div class="unline" id="line' + arraysize + '">' +
+        '<input type="text" readonly value="' + items[arraysize-1] + '">' +
+        '</div>' +
+        '<div class="buttonholder" id="holder' + arraysize + '">' +
+        ' <input type="button" value="edit" class="editbutton" id="edit' + arraysize + '" onclick="edits(this)">' +
+        '<input type="button" value="delete" class="deletebutton" id="delete' + arraysize + '" onclick="deletes(this);">' +
+        '</div>' +
+        '</div>'
     console.log()
+
 }
 
+function deletes(x){
+    x.parentNode.parentNode.remove();
+}
 
+function edits(x){
+    x.parentNode.parentNode.firstChild.firstChild.removeAttribute('readonly');
+}

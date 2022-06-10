@@ -49,6 +49,7 @@ function deletes(x){
 
 function edits(x){
     x.parentNode.parentNode.firstChild.firstChild.removeAttribute('readonly');
+    x.parentNode.parentNode.firstChild.firstChild.focus();
 }
 
 function setsData(x){
